@@ -96,7 +96,7 @@ FROM base
 ENV S6_VERBOSITY=0 S6_BEHAVIOUR_IF_STAGE2_FAILS=2 PUID=65534 PGID=65534
 WORKDIR /config
 VOLUME /config
-EXPOSE 8989
+EXPOSE 6969
 
 # copy files
 COPY --from=build-backend /build /app
