@@ -76,7 +76,8 @@ RUN dotnet build ./src \
         -p:RuntimeIdentifiers=$RUNTIME \
         -p:Configuration=Release \
         -p:SelfContained=false \
-        -t:PublishAllRids
+        -t:PublishAllRids && \
+    chmod +x $artifacts/ffprobe
 
 # merge frontend
 COPY --from=build-frontend /src/_output/UI $artifacts/UI
